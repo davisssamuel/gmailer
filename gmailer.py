@@ -3,16 +3,14 @@ from base64 import b64encode
 from socket import AF_INET, SOCK_STREAM, socket
 from ssl import create_default_context
 
-NL = "\r\n"
-OK_CODE = "250"
+# Create client socket and SSL socket
 SMTP_SERVER = "smtp.gmail.com"
 SSL_TLS_PORT = 465
-
-# Create client socket and SSL socket
 CLIENT_SOCKET = socket(AF_INET, SOCK_STREAM)
 CLIENT_SOCKET.connect((SMTP_SERVER, SSL_TLS_PORT))
 CONTEXT = create_default_context()
 SSL_SOCKET = CONTEXT.wrap_socket(CLIENT_SOCKET, server_hostname=SMTP_SERVER)
+NL = "\r\n"
 
 
 def send(s):

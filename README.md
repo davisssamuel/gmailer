@@ -20,4 +20,4 @@ NOTE: the final flag requires a file (or file path) to read the email body conte
 
 # Additional Info
 
-If you wish you can import this script and use the `send_email` function in your own scripts without having to use the command line interface.
+If you wish, you can import this script and use the `send_email` function in your own scripts without having to use the command line interface.
